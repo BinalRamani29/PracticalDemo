@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.googleprotobuf)
     id("kotlin-parcelize")
-//    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.firebase.crashlytics)
 }
@@ -40,6 +40,8 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    dataBinding { enable = true }
+    viewBinding { enable = true }
 }
 
 dependencies {
